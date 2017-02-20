@@ -1,5 +1,5 @@
 angular
-.module('angularAuthentication')
+.module('avocado')
 .controller('RegisterCtrl', RegisterCtrl);
 
 RegisterCtrl.$inject = ['User', 'CurrentUserService'];

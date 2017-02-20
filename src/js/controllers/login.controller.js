@@ -1,5 +1,5 @@
 angular
-.module('angularAuthentication')
+.module('avocado')
 .controller('LoginCtrl', LoginCtrl);
 
 LoginCtrl.$inject = ['User', 'CurrentUserService'];

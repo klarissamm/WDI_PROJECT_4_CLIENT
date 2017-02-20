@@ -1,5 +1,5 @@
 angular
-  .module('angularAuthentication')
+  .module('avocado')
   .config(Interceptor);
 
 Interceptor.$inject = ['$httpProvider'];

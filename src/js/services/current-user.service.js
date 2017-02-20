@@ -1,5 +1,5 @@
 angular
-.module('angularAuthentication')
+.module('avocado')
 .service('CurrentUserService', CurrentUserService);
 
 CurrentUserService.$inject = ['TokenService', '$rootScope', 'User'];

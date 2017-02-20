@@ -1,3 +1,3 @@
 angular
-  .module('angularAuthentication')
+  .module('avocado')
   .constant('API', 'http://localhost:3000');

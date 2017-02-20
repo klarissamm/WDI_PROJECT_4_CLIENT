@@ -1,5 +1,5 @@
 angular
-  .module('angularAuthentication')
+  .module('avocado')
   .controller('UsersIndexCtrl', UsersIndexCtrl);
 
 UsersIndexCtrl.$inject = ['User', 'CurrentUserService'];

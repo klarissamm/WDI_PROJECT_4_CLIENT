@@ -1,5 +1,5 @@
 angular
-  .module('angularAuthentication', [
+  .module('avocado', [
     'ui.router',
     'ngResource',
     'angular-jwt'

@@ -1,5 +1,5 @@
 angular
-.module('angularAuthentication')
+.module('avocado')
 .service('TokenService', TokenService);
 
 TokenService.$inject = ['$window', 'jwtHelper'];

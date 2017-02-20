@@ -1,5 +1,5 @@
 angular
-  .module('angularAuthentication')
+  .module('avocado')
   .config(Router);
 
 Router.$inject = ['$stateProvider', '$locationProvider', '$urlRouterProvider'];
@@ -28,7 +28,19 @@ function Router($stateProvider, $locationProvider, $urlRouterProvider){
     templateUrl: '/js/views/users/index.html',
     controller: 'UsersIndexCtrl',
     controllerAs: 'usersIndex'
-  });
+  })
+  .state('userEdit', {
+  url: '/user/edit',
+  templateUrl: '/js/views/users/edit.html',
+  controller: 'UsersEditCtrl',
+  controllerAs: 'userEdit'
+})
+.state('userShow', {
+  url: '/user/:id',
+  templateUrl: '/js/views/users/show.html',
+  controller: 'UserShowCtrl',
+  controllerAs: 'userShow'
+});
 
   $urlRouterProvider.otherwise('/');
 }
