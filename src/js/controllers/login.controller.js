@@ -2,8 +2,8 @@ angular
 .module('angularAuthentication')
 .controller('LoginCtrl', LoginCtrl);
 
-LoginCtrl.$inject = ['User'];
-function LoginCtrl(User) {
+LoginCtrl.$inject = ['User', 'TokenService'];
+function LoginCtrl(User, TokenService) {
   const vm = this;
 
   vm.login = () => {
@@ -11,8 +11,7 @@ function LoginCtrl(User) {
     .$promise
     .then(data => {
       console.log(data);
-    }, err => {
-      console.log(err);
+      TokenService.setToken(data.token);
     });
   };
 }
