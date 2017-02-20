@@ -6,16 +6,17 @@ PeriodsShowCtrl.$inject = ['Period', '$stateParams', '$state'];
 function PeriodsShowCtrl(Period, $stateParams, $state){
   const vm = this;
 
-  function getUser(){
+  function getPeriods(){
     Period
     .get($stateParams)
     .$promise
     .then(response => {
       vm.period = response;
+      console.log(response);
     });
   }
 
-  getUser();
+  getPeriods();
 
 
   vm.delete = function(){

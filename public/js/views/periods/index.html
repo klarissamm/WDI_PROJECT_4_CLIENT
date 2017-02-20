@@ -1,0 +1,9 @@
+<h1>My past periods</h1>
+<div class="media" ng-repeat="period in periodsIndex.periods">
+  <div class="media-left">
+  </div>
+  <div class="media-body">
+  <h4><a ui-sref="periodShow({ id: period.id})" href="#" class="btn btn-primary">{{ period.date }}</a></h4>
+    <p>{{ period.bleeding }}</p>
+  </div>
+</div>
