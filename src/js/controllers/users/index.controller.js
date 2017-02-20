@@ -2,8 +2,14 @@ angular
   .module('angularAuthentication')
   .controller('UsersIndexCtrl', UsersIndexCtrl);
 
-UsersIndexCtrl.$inject = ['User'];
-function UsersIndexCtrl(User){
+UsersIndexCtrl.$inject = ['User', 'CurrentUserService'];
+function UsersIndexCtrl(User, CurrentUserService){
   const vm = this;
   vm.users = User.query();
+
+
+  vm.getUser = function(){
+    return CurrentUserService.currentUser;
+  };
+
 }
