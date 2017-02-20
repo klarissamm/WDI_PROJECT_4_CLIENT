@@ -6,8 +6,8 @@ RegisterCtrl.$inject = ['User'];
 function RegisterCtrl(User) {
   const vm    = this;
   vm.register =  () => {
-    User
-    .register(vm.user)
+    User    
+    .register(vm.user.user)
     .$promise
     .then(data => {
       console.log(data);
