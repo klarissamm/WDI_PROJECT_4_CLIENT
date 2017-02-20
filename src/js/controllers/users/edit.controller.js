@@ -2,8 +2,8 @@ angular
   .module('avocado')
   .controller('UsersEditCtrl', UsersEditCtrl);
 
-UsersEditCtrl.$inject = ['User', 'API', '$state', 'CurrentUserService', '$http'];
-function UsersEditCtrl(User, API, $state, CurrentUserService, $http){
+UsersEditCtrl.$inject = ['User', 'API', '$state', 'CurrentUserService'];
+function UsersEditCtrl(User, API, $state, CurrentUserService){
   const vm = this;
 
   usersShow();
@@ -16,18 +16,6 @@ function UsersEditCtrl(User, API, $state, CurrentUserService, $http){
       vm.user = response;
     });
 
-  }
-
-  vm.searchCharities = searchCharities;
-  function searchCharities(){
-    if (vm.charitySearch) {
-      $http({
-        method: 'GET',
-        url: `https://api.justgiving.com/06beb149/v1/charity/search?q=${vm.charitySearch}&pageSize=5`
-      }).then(response => {
-        vm.charitiesList = response.data.charitySearchResults;
-      });
-    }
   }
 
   vm.update = function(){

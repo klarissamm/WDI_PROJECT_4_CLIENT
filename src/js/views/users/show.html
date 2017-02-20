@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="span3 well col-sm-5 col-xs-12">
+    <center>
+      <div class="circle" style="background-image: url({{ userShow.user.image }})"></div>
+      <h3>{{ userShow.user.username }}</h3>
+      <h4 class="media-heading">Age: {{ userShow.user.age }}</h4>
+      <h4 class="media-heading"><small><span>Contraception: </span>{{userShow.user.contraception}}</small></h4>
+      <h5>Last Period:</h5>
+      <h3>{{userShow.user.lastPeriod}}</h3>
+
+
+      <button ng-hide="userShow.isCurrentUser()" class="btn btn-primary" ui-sref="userEdit">Edit</button>
+      <button ng-hide="userShow.isCurrentUser()" class="btn btn-warning" ng-click="userShow.delete()">Delete</button>
+
+    </center>
+  </div>
+</div>
