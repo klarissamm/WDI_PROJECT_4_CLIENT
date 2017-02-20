@@ -42,8 +42,13 @@
               <a ng-click="main.logout()">Logout</a>
             </li>
           </ul>
-        </div><!-- /.navbar-collapse -->
-      </div><!-- /.container-fluid -->
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <p class="navbar-text">Welcome, {{ main.user.user.username }}</p>
+            </li>
+          </ul><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+        </div>
       </nav>
     </header>
     <main class="container" ui-view></main>
