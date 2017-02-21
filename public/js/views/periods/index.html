@@ -27,8 +27,7 @@
       view-date="periodsIndex.viewDate"
       events="periodsIndex.periods"
       view-title="periodsIndex.calendarTitle"
-      on-event-click="periodsIndex.eventClicked(calendarEvent)"
-      on-event-times-changed="calendarEvent.startsAt = calendarNewEventStart; calendarEvent.endsAt = calendarNewEventEnd"
-      cell-is-open="true">
+      cell-is-open="periodsIndex.test"
+      on-event-click="periodsIndex.open(calendarEvent, 'lg')"
   </mwl-calendar>
 </div>
