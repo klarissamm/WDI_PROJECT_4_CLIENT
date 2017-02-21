@@ -43,12 +43,9 @@ function PeriodsIndexCtrl(Period, calendarConfig, $uibModal, $document, $scope){
       }
     });
 
-    vm.ok = function () {
-      vm.close({$value: vm.selected.item});
+    vm.close = function(){
+      angular.element('#modal').modal('hide');
     };
 
-    vm.cancel = function () {
-      vm.dismiss({$value: 'cancel'});
-    };
   };
 }
