@@ -2,12 +2,12 @@ angular
 .module('avocado')
 .controller('MainCtrl', MainCtrl);
 
-MainCtrl.$inject = ['$rootScope', 'CurrentUserService', '$state', '$stateParams'];
-function MainCtrl($rootScope, CurrentUserService, $state, $stateParams) {
+MainCtrl.$inject = ['$rootScope', 'CurrentUserService', '$state'];
+function MainCtrl($rootScope, CurrentUserService, $state) {
   const vm = this;
   $rootScope.$on('loggedIn', () => {
     vm.user = CurrentUserService.currentUser;
-    $state.go('userShow');
+    $state.go('userShow', {id: vm.user.id});
   });
   $rootScope.$on('loggedOut', () => {
     vm.user = null;

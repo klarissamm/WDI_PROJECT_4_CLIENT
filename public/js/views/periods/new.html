@@ -1,0 +1,15 @@
+<section class="container">
+  <h1 class="register">New Period</h1>
+  <p class="info">Enter your daily data below</p>
+  <form ng-submit="periodNew.create()">
+    <div class="row">
+      <div class="col-md-4"><label>Date</label><input class="form-control" type="date" name="date" ng-model="periodNew.period.date" placeholder="Date"></div>
+      <div class="col-md-4"><label>Bleeding</label><input class="form-control" type="text" name="text" ng-model="periodNew.period.bleeding" placeholder="Bleeding"></div>
+      <div class="col-md-4"><label>Pain Experienced</label><input class="form-control" type="integer" name="age" ng-model="periodNew.period.pain" placeholder="Pain"></div>
+    </div>
+    <div class="row">
+      <div class="col-md-6"><label>Any notes</label><input class="form-control" type="text" name="Notes" ng-model="periodNew.period.notes" placeholder="Notes"></div>
+    <input class="btn btn-primary" type="submit" value="Submit" />
+  </div>
+  </form>
+</section>
