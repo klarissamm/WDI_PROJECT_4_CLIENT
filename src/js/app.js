@@ -3,5 +3,7 @@ angular
     'ui.router',
     'ngResource',
     'angular-jwt',
-    'ngParallax'
+    'ngParallax',
+    'mwl.calendar',
+    'ui.bootstrap'
   ]);

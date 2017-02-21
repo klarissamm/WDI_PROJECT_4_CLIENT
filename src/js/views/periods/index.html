@@ -1,1 +1,34 @@
-<h1>My past periods</h1>
+<div class="container">
+  <h1>My past periods</h1>
+
+  <h3>{{ periodsIndex.calendarTitle }}</h3>
+
+  <button
+    class="btn btn-primary"
+    mwl-date-modifier
+    date="periodsIndex.viewDate"
+    decrement="periodsIndex.calendarView"
+  >Previous Month</button>
+  <button
+    class="btn btn-primary"
+    mwl-date-modifier
+    date="periodsIndex.viewDate"
+    set-to-today
+  >Today</button>
+  <button
+    class="btn btn-primary"
+    mwl-date-modifier
+    date="periodsIndex.viewDate"
+    increment="periodsIndex.calendarView"
+  >Next Month</button>
+
+  <mwl-calendar
+      view="periodsIndex.calendarView"
+      view-date="periodsIndex.viewDate"
+      events="periodsIndex.periods"
+      view-title="periodsIndex.calendarTitle"
+      on-event-click="periodsIndex.eventClicked(calendarEvent)"
+      on-event-times-changed="calendarEvent.startsAt = calendarNewEventStart; calendarEvent.endsAt = calendarNewEventEnd"
+      cell-is-open="true">
+  </mwl-calendar>
+</div>

@@ -5,5 +5,19 @@ angular
 PeriodsIndexCtrl.$inject = ['Period'];
 function PeriodsIndexCtrl(Period){
   const vm = this;
-  vm.periods = Period.query();
+  Period
+    .query()
+    .$promise
+    .then(data => {
+      vm.periods = data.map(period => {
+        period.startsAt = new Date(period.date);
+        return period;
+      });
+    });
+  vm.calendarView = 'month';
+  vm.viewDate     = new Date();
+
+  vm.eventClicked = function(data) {
+    console.log(data);
+  };
 }
