@@ -3,6 +3,5 @@ angular
     'ui.router',
     'ngResource',
     'angular-jwt',
-    'ui.calendar',
     'ngParallax'
   ]);
