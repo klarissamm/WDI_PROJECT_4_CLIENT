@@ -1,0 +1,36 @@
+.periods {
+  margin-top: 20px;
+  font-family: $logo-font;
+  color: $light-primary-color;
+  font-weight: bold;
+
+  h1 {
+    font-size: 40px;
+
+  }
+
+
+    .feb {
+      color: #dc2a5e;
+      text-align: right;
+    }
+  button {
+    background-color: $white;
+    border: 1px solid $light-primary-color;
+    color: $dark-primary-color;
+    border: 0px;
+    height: 40px;
+    margin-right: 105px;
+    margin-left: 105px;
+  }
+
+  button:hover {
+    background-color: $dark-primary-color;
+    color: $white;
+  }
+
+  button:focus {
+    background-color: $dark-primary-color;
+    color: $white;
+  }
+}

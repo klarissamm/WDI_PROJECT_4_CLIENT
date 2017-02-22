@@ -72,10 +72,6 @@ header {
         top: 8px;
       }
 
-      .avicon:hover {
-        -webkit-filter: invert(100%) !important;
-      }
-
       > li > a {
         text-decoration: none;
         color: $primary-color;
@@ -91,12 +87,20 @@ header {
   }
 }
 
+// header .container .column:hover {
+//       background-color: $primary-color;
+//       color: $white;
+//
+// a:hover {
+//           color: $white;
+//
+//         }
+//     }
+
 header .container .column:hover {
-      background-color: $primary-color;
-      color: $white;
+  background-color: $primary-color;
+  color: $white;
+}
 
-a:hover {
-          color: $white;
-
-        }
-    }
+header .container .column:hover img { -webkit-filter: invert(100%) !important; }
+header .container .column:hover a { color: #fff !important; }

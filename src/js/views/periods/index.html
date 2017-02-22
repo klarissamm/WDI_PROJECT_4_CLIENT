@@ -1,26 +1,26 @@
-<div class="container">
-  <h1>My past periods</h1>
+<div class="container periods">
+  <h1>{{ main.user.username | uppercase }}'S PAST PERIODS </h1>
 
-  <h3>{{ periodsIndex.calendarTitle }}</h3>
+  <h3 class="feb">{{ periodsIndex.calendarTitle }}
+    <button
+      class="btn btn-primary"
+      mwl-date-modifier
+      date="periodsIndex.viewDate"
+      decrement="periodsIndex.calendarView"
+    >Previous Month</button>
+    <button
+      class="btn btn-primary"
+      mwl-date-modifier
+      date="periodsIndex.viewDate"
+      set-to-today
+    >Current Month</button>
+    <button
+      class="btn btn-primary"
+      mwl-date-modifier
+      date="periodsIndex.viewDate"
+      increment="periodsIndex.calendarView"
+    >Next Month</button></h3>
 
-  <button
-    class="btn btn-primary"
-    mwl-date-modifier
-    date="periodsIndex.viewDate"
-    decrement="periodsIndex.calendarView"
-  >Previous Month</button>
-  <button
-    class="btn btn-primary"
-    mwl-date-modifier
-    date="periodsIndex.viewDate"
-    set-to-today
-  >Current Month</button>
-  <button
-    class="btn btn-primary"
-    mwl-date-modifier
-    date="periodsIndex.viewDate"
-    increment="periodsIndex.calendarView"
-  >Next Month</button>
 
   <mwl-calendar
       view="periodsIndex.calendarView"
@@ -29,5 +29,6 @@
       view-title="periodsIndex.calendarTitle"
       cell-is-open="periodsIndex.test"
       on-event-click="periodsIndex.open(calendarEvent, 'lg')"
-  </mwl-calendar>
+      cell-auto-open-disabled="true"
+  ></mwl-calendar>
 </div>

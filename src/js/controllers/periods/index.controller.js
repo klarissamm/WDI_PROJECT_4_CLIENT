@@ -13,8 +13,7 @@ function PeriodsIndexCtrl(Period, calendarConfig, $uibModal, $document, $scope){
       period.title = 'Show Infomation';
       period.startsAt = new Date(period.date);
       period.color = {
-        primary: '#333',
-        secondary: '#e00'
+        primary: 'green'
       };
       period.incrementsBadgeTotal = false;
       period.allDay = true;

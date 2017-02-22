@@ -34,7 +34,7 @@
         <div class="col-md-2 column">
           <li ng-show="main.user">
             <img class="avicon" src="/images/avocado-icon.png" alt="">
-            <a ui-sref="userShow({ id: main.user.id})">MY PROFILE</a>
+            <a ui-sref="userShow({ id: main.user.id })"> {{ main.user.username |  uppercase }}'S PROFILE</a>
           </li>
         </div>
         <div class="col-md-2 column">
@@ -45,8 +45,8 @@
         </div>
         <div class="col-md-2 column">
           <li ng-show="main.user">
-            <img class="avicon" src="/images/avocado-icon.png" alt="">
-            <a ui-sref="periodsIndex">MY PERIODS</a>
+            <img class="avicon lighten" src="/images/avocado-icon.png" alt="">
+            <a class="lighten" lighten ui-sref="periodsIndex">{{ main.user.username |  uppercase }}'S PERIODS</a>
           </li>
         </div>
         <div class="col-md-2 column">
