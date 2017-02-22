@@ -4,8 +4,8 @@
 }
 
 div#imgg.col-md-6 {
-
-  background-color: $bg-color;
+  margin-top: 15px;
+  background-color: rgba(45,2,45,.4);
   height: 100vh;
 
 
@@ -16,9 +16,59 @@ div#imgg.col-md-6 {
   }
 }
 div#coll-info.col-md-6 {
-  background-color: $bg-color;
+  margin-top: 15px;
+  font-family: $logo-font;
+  background-color: rgba(45,2,45,.4);
   height: 100vh;
-  display: table-cell;
-  vertical-align: middle;
+  text-align: center;
+  color: $white;
+  padding-top: 15px;
+
+  .info-card {
+    font-family: $text-font;
+    text-align: center;
+    margin-top: 0 auto;
+    height: 90vh;
+    width: 90%;
+    background-color: $primary-color;
+
+  .name {
+    font-size: 100px;
+    font-weight: bold;
+    font-family: $logo-font;
+  }
+  .btn-secondary {
+    background-color: $white;
+    border: 1px solid $light-primary-color;
+    color: $dark-primary-color;
+    margin-top: 150px;
+  }
+
+  .btn-primary {
+    margin-top: 150px;
+    background-color: $white;
+    border: 1px solid $light-primary-color;
+    color: $dark-primary-color;
+  }
+  .btn-warning {
+    margin-top: 150px;
+    background-color: $white;
+    border: 1px solid $light-primary-color;
+    color: $dark-primary-color;
+  }
+
+  .btn-primary:hover {
+    background-color: $dark-primary-color;
+    color: $white;
+  }
+  .btn-warning:hover {
+    background-color: $dark-primary-color;
+    color: $white;
+  }
+  .btn-secondary:hover {
+    background-color: $dark-primary-color;
+    color: $white;
+  }
+    }
 
   }

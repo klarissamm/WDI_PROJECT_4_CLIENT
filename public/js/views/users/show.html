@@ -2,24 +2,25 @@
 
   <div class="row">
     <div class="col-md-6" id="imgg">
-      <center>
           <img class="image" ng-src="{{userShow.user.image}}" alt="Description">
-      </center>
-
     </div>
     <div class="col-md-6" id="coll-info">
-      <center>
-            <h3>{{ userShow.user.username }}</h3>
-        <h4 class="media-heading">Age: {{ userShow.user.age }}</h4>
-        <h4 class="media-heading"><small><span>Contraception: </span>{{userShow.user.contraception}}</small></h4>
-        <h5>Last Period:</h5>
-        <h3>{{userShow.user.lastPeriod}}</h3>
+      <div class="info-card">
 
+<div class="showtext">
 
-        <button ng-hide="userShow.isCurrentUser()" class="btn btn-primary" ui-sref="userEdit">Edit</button>
-        <button ng-hide="userShow.isCurrentUser()" class="btn btn-warning" ng-click="userShow.delete()">Delete</button>
-      </center>
+            <h3 class="name">{{ userShow.user.username }}</h3>
+        <h4 class="age">Age: {{ userShow.user.age }}</h4>
+        <h4 class="contraception">Contraception method: {{userShow.user.contraception}}</h4>
+        <h4>Date of Last Period: {{userShow.user.lastPeriod}}</h4>
+        <h4>More information:</h4>
+        <button class="btn btn-secondary" ui-sref="periodsIndex">My Periods</button>
+
+        <button ng-hide="userShow.isCurrentUser()" class="btn btn-primary" ui-sref="userEdit">Edit Profile</button>
+        <button ng-hide="userShow.isCurrentUser()" class="btn btn-warning" ng-click="userShow.delete()">Delete Profile</button>
+              </div>
     </div>
+  </div>
 
   </div>
   </div>
