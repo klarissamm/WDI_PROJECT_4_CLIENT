@@ -3,10 +3,10 @@
   font-family: $logo-font;
 }
 
-  #educate {
-    height: 100vh;
+#educate {
+  height: 100vh;
 
-    h1 {
+  h1 {
     margin-top: 100px;
     vertical-align: middle;
     text-align: center;
@@ -42,16 +42,16 @@
   height: 100vh;
 
   h2 {
-  vertical-align: middle;
-  text-align: center;
-  font-size: 25px;
-  color: $light-primary-color;
-}
-span {
-  font-weight: bold;
-  font-size: 50px;
-  color: #dc2a5e;
-}
+    vertical-align: middle;
+    text-align: center;
+    font-size: 25px;
+    color: $light-primary-color;
+  }
+  span {
+    font-weight: bold;
+    font-size: 50px;
+    color: #dc2a5e;
+  }
 }
 
 
