@@ -1,0 +1,24 @@
+.showpageusers {
+    width: 100%;
+    height: 100vh;
+}
+
+div#imgg.col-md-6 {
+
+  background-color: $bg-color;
+  height: 100vh;
+
+
+  .image {
+    margin-top: 30px;
+    height: 90vh;
+    width: 90%;
+  }
+}
+div#coll-info.col-md-6 {
+  background-color: $bg-color;
+  height: 100vh;
+  display: table-cell;
+  vertical-align: middle;
+
+  }

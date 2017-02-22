@@ -1,17 +1,11 @@
-<div class="container">
-  <div class="span3 well col-sm-5 col-xs-12">
-    <center>
-      <h3>{{ periodShow.period.date }}</h3>
-      <h4 class="media-heading">Date of period: {{ periodShow.period.date  }}</h4>
-      <h4 class="media-heading"><small><span>Bleeding </span>{{periodShow.period.bleeding}}</small></h4>
-      <h5>Pain experienced:</h5>
-      <h3>{{periodShow.period.pain}}</h3>
-      <p>{{periodShow.period.notes}}</p>
-
-
-      <!-- <button ng-hide="userShow.isCurrentUser()" class="btn btn-primary" ui-sref="userEdit">Edit</button>
-      <button ng-hide="userShow.isCurrentUser()" class="btn btn-warning" ng-click="userShow.delete()">Delete</button> -->
-
-    </center>
-  </div>
+<div class="modal-header">
+  <h3 class="modal-title" id="modal-title">Period log for {{ periodShow.period.date }}</h3>
+</div>
+<div class="modal-body" id="modal-body">
+<h6>How do I feel today?</h6>
+<p>{{ periodShow.painInWords[periodShow.period.pain.toString()] }} </p>
+<h6>Bleeding is</h6>
+<p>{{ periodShow.bleedingInWords[periodShow.period.bleeding.toString()] }} </p>
+<h6>Additional notes:</h6>
+<p>{{ periodShow.period.notes }} </p>
 </div>

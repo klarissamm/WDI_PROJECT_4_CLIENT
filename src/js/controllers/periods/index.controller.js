@@ -25,21 +25,18 @@ function PeriodsIndexCtrl(Period, calendarConfig, $uibModal, $document, $scope){
   vm.calendarView = 'month';
   vm.viewDate     = new Date();
 
-  vm.animationsEnabled = true;
-
-  vm.open = function(data, size) {
-
+  vm.open = function(period, size) {
     var modalInstance = $uibModal.open({
-      animation: vm.animationsEnabled,
+      animation: true,
       ariaLabelledBy: 'modal-title',
       ariaDescribedBy: 'modal-body',
-      templateUrl: '/js/views/periods/modal.html',
       size: size,
       appendTo: angular.element($document[0].querySelector('main')),
+      controller: 'PeriodsShowCtrl',
+      controllerAs: 'periodShow',
+      templateUrl: '/js/views/periods/show.html',
       resolve: {
-        data: function () {
-          return data;
-        }
+        period: period
       }
     });
 

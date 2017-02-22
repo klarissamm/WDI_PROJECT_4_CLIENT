@@ -2,27 +2,32 @@ angular
 .module('avocado')
 .controller('PeriodsShowCtrl', PeriodsShowCtrl);
 
-PeriodsShowCtrl.$inject = ['Period', '$stateParams', '$state'];
-function PeriodsShowCtrl(Period, $stateParams, $state){
+PeriodsShowCtrl.$inject = ['Period', '$stateParams', '$state', 'period'];
+function PeriodsShowCtrl(Period, $stateParams, $state, period){
   const vm = this;
 
-  function getPeriods(){
-    Period
-    .get($stateParams)
-    .$promise
-    .then(response => {
-      vm.period = response;
-      console.log(response);
-    });
-  }
+  vm.period = period;
 
-  getPeriods();
+  vm.painInWords = {
+    '1': 'Achey Feeling',
+    '2': 'Cramps',
+    '3': 'Cramps and Headache',
+    '4': 'Cramps, Headache and Nausea',
+    '5': 'Kill Me Now'
+  };
 
+  vm.bleedingInWords = {
+    '1': 'Light',
+    '2': 'Medium',
+    '3': 'Heavy'
+  };
 
   vm.delete = function(){
     Period
     .delete($stateParams)
-    .$promise;
-    $state.go('/');
+    .$promise
+    .then(() => {
+      $state.go('/');
+    });
   };
 }
