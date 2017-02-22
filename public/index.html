@@ -17,6 +17,7 @@
 <body ng-controller="MainCtrl as main">
   <header>
     <div class="site-header-top"><a class="home-brand" ui-sref="home">AVOCADO</a> </div>
+        <div class="site-header-middle">your period companion</div>
     <nav class="navbar navbar-default">
       <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -33,7 +34,7 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-center">
             <li ng-show="main.user">
-              <p class="navbar-text">Welcome {{ main.user.username }}</p>
+              <!-- <p class="navbar-text">Welcome {{ main.user.username }}</p> -->
             </li>
             <li ng-hide="main.user">
               <a ui-sref="register">REGISTER</a>
@@ -41,14 +42,21 @@
             <li ng-hide="main.user">
               <a ui-sref="login">LOGIN</a>
             </li>
+            
             <li ng-show="main.user">
-              <a ui-sref="usersIndex">Users</a>
+              <a ui-sref="userShow({ id: main.user.id})">My Profile</a>
+            </li>
+            <li ng-show="main.user">
+              <a ui-sref="periodsIndex">More info</a>
             </li>
             <li ng-show="main.user">
               <a ui-sref="periodsIndex">My Periods</a>
             </li>
             <li ng-show="main.user">
               <a ui-sref="periodNew">Add Next Period</a>
+            </li>
+            <li ng-show="main.user">
+              <a ui-sref="periodNew">Emergency Supplies</a>
             </li>
             <li ng-show="main.user">
               <a ng-click="main.logout()">Logout</a>
