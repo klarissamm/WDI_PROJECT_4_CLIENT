@@ -3,6 +3,7 @@
   <p class="info">Enter your daily data below</p>
   <form ng-submit="periodNew.create()">
     <div class="row">
+      <div class="col-md-4"><label>Date</label><input class="form-control" type="date" name="date" ng-model="periodNew.period.date" placeholder="Date"></div>
       <div class="col-md-4">
         <label for="pain"> What kind of pain are you experiencing? </label>
         <select name="pain" ng-model="periodNew.period.pain">

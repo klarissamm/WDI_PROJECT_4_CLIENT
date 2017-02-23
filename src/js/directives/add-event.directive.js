@@ -17,7 +17,7 @@ function AddEvent($timeout) {
           e.preventDefault();
           const day = this.querySelector('span[data-cal-date]').textContent;
           const month = document.querySelector('.periodInfo h3').textContent;
-          console.log(`${day} ${month}`)
+          console.log(`${day} ${month}`);
           const date = new Date(`${day} ${month}`);
           console.log(date);
           scope.periodsIndex.addPeriod(date);

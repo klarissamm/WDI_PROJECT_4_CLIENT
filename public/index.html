@@ -5,10 +5,10 @@
   <title>AVOCADO</title>
   <base href="/" />
   <!-- inject:js -->
-  <script src="js/app.js"></script>
+  <script src="/js/app.js"></script>
   <!-- endinject -->
   <!-- inject:css -->
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="/css/style.css">
   <!-- endinject -->
   <link rel="icon" href="/images/avocado-icon.png">
   <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Comfortaa|Nixie+One|Poiret+One" rel="stylesheet">
@@ -32,14 +32,7 @@
           <button class="btn btn-login" ui-sref="login">LOG IN</button>
         </li>
       </div>
-
       <div ng-show="main.user" class="row naving">
-        <div class="col-md-2 column">
-          <li ng-show="main.user">
-            <img class="avicon" src="/images/avocado-icon.png" alt="">
-            <a ui-sref="home">HOME</a>
-          </li>
-        </div>
         <div class="col-md-2 column">
           <li ng-show="main.user">
             <img class="avicon" src="/images/avocado-icon.png" alt="">
@@ -61,7 +54,13 @@
         <div class="col-md-2 column">
           <li ng-show="main.user">
             <img class="avicon" src="/images/avocado-icon.png" alt="">
-            <a ui-sref="periodNew">NOTIFY CONTACTS</a>
+            <a ui-sref="periodNew">ADD PERIOD</a>
+          </li>
+        </div>
+        <div class="col-md-2 column">
+          <li ng-show="main.user">
+            <img class="avicon" src="/images/avocado-icon.png" alt="">
+            <a ui-sref="periodNew">EMERGENCIES</a>
           </li>
         </div>
         <div class="col-md-2 column">
