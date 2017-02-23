@@ -5,5 +5,6 @@ angular
     'angular-jwt',
     'ngParallax',
     'mwl.calendar',
-    'ui.bootstrap'
+    'ui.bootstrap',
+    'ngMap'
   ]);

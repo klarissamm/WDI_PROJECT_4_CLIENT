@@ -2,24 +2,34 @@ angular
 .module('avocado')
 .controller('PeriodsIndexCtrl', PeriodsIndexCtrl);
 
-PeriodsIndexCtrl.$inject = ['Period', 'calendarConfig', '$uibModal', '$document', '$scope'];
-function PeriodsIndexCtrl(Period, calendarConfig, $uibModal, $document, $scope){
+PeriodsIndexCtrl.$inject = ['Period', 'calendarConfig', '$uibModal', '$document', '$scope', '$rootScope', '$uibModalStack'];
+function PeriodsIndexCtrl(Period, calendarConfig, $uibModal, $document, $scope, $rootScope, $uibModalStack){
   const vm = this;
-  Period
-  .query()
-  .$promise
-  .then(data => {
-    vm.periods = data.map(period => {
-      period.title = 'Show Infomation';
-      period.startsAt = new Date(period.date);
-      period.color = {
-        primary: '#dc2a5e'
-      };
-      period.incrementsBadgeTotal = false;
-      period.allDay = true;
-      return period;
-    });
+
+  $rootScope.$on('addedPeriod', () => {
+    vm.fetchPeriods();
+    $uibModalStack.dismissAll();
   });
+
+  vm.fetchPeriods = () => {
+    Period
+    .query()
+    .$promise
+    .then(data => {
+      vm.periods = data.map(period => {
+        period.title = 'Show Infomation';
+        period.startsAt = new Date(period.date);
+        period.color = {
+          primary: '#dc2a5e'
+        };
+        period.incrementsBadgeTotal = false;
+        period.allDay = true;
+        return period;
+      });
+    });
+  };
+
+  vm.fetchPeriods();
 
   vm.calendarView = 'month';
   vm.viewDate     = new Date();
@@ -45,7 +55,7 @@ function PeriodsIndexCtrl(Period, calendarConfig, $uibModal, $document, $scope){
   };
 
   vm.addPeriod = function(date) {
-    const modalInstance = $uibModal.open({
+    const $modalInstance = $uibModal.open({
       animation: true,
       ariaLabelledBy: 'modal-title',
       ariaDescribedBy: 'modal-body',

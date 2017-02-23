@@ -22,7 +22,8 @@
     "angular-resource": "^1.6.2",
     "ng-simple-parallax": "*",
     "angular-bootstrap-calendar": "^0.28.0",
-    "angular-bootstrap": "^2.5.0"
+    "angular-bootstrap": "^2.5.0",
+    "ngmap": "^1.17.8"
   },
   "overrides": {
     "bootstrap": {

@@ -2,8 +2,8 @@ angular
   .module('avocado')
   .controller('PeriodsNewCtrl', PeriodsNewCtrl);
 
-PeriodsNewCtrl.$inject = ['API', '$state', '$resource', 'Period', 'date'];
-function PeriodsNewCtrl(API, $state, $resource, Period, date) {
+PeriodsNewCtrl.$inject = ['API', '$state', '$resource', 'Period', 'date', '$rootScope'];
+function PeriodsNewCtrl(API, $state, $resource, Period, date, $rootScope) {
   const vm  = this;
 
   vm.period = vm.period || {
@@ -17,7 +17,7 @@ function PeriodsNewCtrl(API, $state, $resource, Period, date) {
       .save({ period: vm.period })
       .$promise
       .then(() => {
-        $state.go('periodsIndex');
+        $rootScope.$broadcast('addedPeriod');
       });
   }
 }

@@ -1,9 +1,11 @@
 const express = require('express');
 const port    = process.env.PORT || 4000;
 const app     = express();
+const cors    = require('cors');
 const dest    = `${__dirname}/public`;
 
 
+app.use(cors());
 app.use(express.static(dest));
 
 app.get('/*', (req, res) => res.sendFile(`${dest}/index.html`));

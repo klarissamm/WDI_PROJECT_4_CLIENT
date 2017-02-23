@@ -2,8 +2,8 @@ angular
 .module('avocado')
 .controller('MainCtrl', MainCtrl);
 
-MainCtrl.$inject = ['$rootScope', 'CurrentUserService', '$state'];
-function MainCtrl($rootScope, CurrentUserService, $state) {
+MainCtrl.$inject = ['$rootScope', 'CurrentUserService', '$state', '$scope'];
+function MainCtrl($rootScope, CurrentUserService, $state, $scope) {
   const vm = this;
   $rootScope.$on('loggedIn', () => {
     vm.user = CurrentUserService.currentUser;
@@ -16,4 +16,12 @@ function MainCtrl($rootScope, CurrentUserService, $state) {
   vm.logout = () => {
     CurrentUserService.removeUser();
   };
+
+  navigator.geolocation.getCurrentPosition((position) =>{
+    vm.user_position = {};
+    vm.user_position.lat = position.coords.latitude;
+    vm.user_position.lng = position.coords.longitude;
+    console.log('success', vm.user_position);
+    $scope.$apply();
+  });
 }

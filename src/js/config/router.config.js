@@ -63,11 +63,11 @@ function Router($stateProvider, $locationProvider, $urlRouterProvider){
   url: '/about',
   templateUrl: '/js/views/about.html'
 })
-.state('contactsIndex', {
-  url: '/contacts',
-  templateUrl: '/js/views/contacts/index.html',
-  controller: 'ContactsIndexCtrl',
-  controllerAs: 'contactsIndex'
+.state('nearestPharmacy', {
+  url: '/find-a-pharmacy',
+  templateUrl: '/js/views/nearestPharmacy.html',
+  controller: 'NearestPharmacyCtrl',
+  controllerAs: 'nearestPharmacy'
 })
 .state('contactNew', {
   url: '/contacts',
