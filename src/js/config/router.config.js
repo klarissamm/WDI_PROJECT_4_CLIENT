@@ -68,12 +68,6 @@ function Router($stateProvider, $locationProvider, $urlRouterProvider){
   templateUrl: '/js/views/nearestPharmacy.html',
   controller: 'NearestPharmacyCtrl',
   controllerAs: 'nearestPharmacy'
-})
-.state('contactNew', {
-  url: '/contacts',
-  templateUrl: '/js/views/contacts/index.html',
-  controller: 'ContactsNewCtrl',
-  controllerAs: 'contactNew'
 });
 
   $urlRouterProvider.otherwise('/');
