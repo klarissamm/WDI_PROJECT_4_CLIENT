@@ -1,11 +1,11 @@
+<div class="showinfoperiods">
 <div class="modal-header">
-  <h3 class="modal-title" id="modal-title">Period log for {{ periodShow.period.date }}</h3>
+  <h3 class="modal-title" id="modal-title"> DATE <span>{{ periodShow.period.date }}</span></h3>
 </div>
 <div class="modal-body" id="modal-body">
-<h6>How do I feel today?</h6>
-<p>{{ periodShow.painInWords[periodShow.period.pain.toString()] }} </p>
-<h6>Bleeding is</h6>
-<p>{{ periodShow.bleedingInWords[periodShow.period.bleeding.toString()] }} </p>
-<h6>Additional notes:</h6>
-<p>{{ periodShow.period.notes }} </p>
+<h6>Today I had <span>{{ periodShow.painInWords[periodShow.period.pain.toString()] }}</span> </h6>
+<h6>My bleeding was <span> {{ periodShow.bleedingInWords[periodShow.period.bleeding.toString()] }}</span></h6>
+<h6 class="addnotesec"><span>Additional notes:</span></h6>
+<h6 class="addnote">{{ periodShow.period.notes }} </h6>
+</div>
 </div>

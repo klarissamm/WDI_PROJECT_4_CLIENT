@@ -14,7 +14,7 @@ header {
     .home-brand {
       font-size: 10rem;
       font-family: $logo-font;
-      color: $primary-color;
+      color: $light-primary-color;
       line-height: 150px;
       height: 64px;
       text-decoration: none;
@@ -88,4 +88,8 @@ header .cont .column > li > .lastone {
 
 header .cont .firstcol {
   border-left: 0px solid #fff;
+}
+
+header .cont .column > li > .notcont {
+    left: 55px;
 }

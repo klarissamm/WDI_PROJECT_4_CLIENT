@@ -1,5 +1,13 @@
 div.cal-month-day {
   &:hover {
-    background: red;
+    background: rgba(69,13,68,.2);
   }
+}
+
+mwl-calendar .cal-day-today {
+  background: rgba(69,13,68,.4);
+}
+
+mwl-calendar .cal-day-today span[data-cal-date] {
+  color: $dark-primary-color;
 }

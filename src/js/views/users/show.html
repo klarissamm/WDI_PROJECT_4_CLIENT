@@ -2,25 +2,23 @@
 
   <div class="row">
     <div class="col-md-6" id="imgg">
-          <img class="image" ng-src="{{userShow.user.image}}" alt="Description">
+      <img class="image" ng-src="{{userShow.user.image}}" alt="Description">
     </div>
     <div class="col-md-6" id="coll-info">
       <div class="info-card">
-
-<div class="showtext">
-
-            <h3 class="name">{{ userShow.user.username }}</h3>
-        <h4 class="age">Age: {{ userShow.user.age }}</h4>
-        <h4 class="contraception">Contraception method: {{userShow.user.contraception}}</h4>
-        <h4>Date of Last Period: {{userShow.user.lastPeriod}}</h4>
-        <h4>More information:</h4>
-        <button class="btn btn-secondary" ui-sref="periodsIndex">My Periods</button>
-
-        <button ng-hide="userShow.isCurrentUser()" class="btn btn-primary" ui-sref="userEdit">Edit Profile</button>
-        <button ng-hide="userShow.isCurrentUser()" class="btn btn-warning" ng-click="userShow.delete()">Delete Profile</button>
+        <div class="showtext">
+          <h3 class="name"><span>{{ userShow.user.username | uppercase }}</span></h3>
+          <h4 class="age"><span>{{ userShow.user.age }}</span> YEARS OLD</h4>
+          <h4 class="contraception">USING THE  <span>{{userShow.user.contraception | uppercase}}</span> AS CONTRACEPTION</h4>
+          <h4>LAST PERIOD DATE <span>{{userShow.user.lastPeriod}}</span></h4>
               </div>
+          <button class="btn btn-secondary" ui-sref="periodsIndex">My Periods</button>
+
+          <button ng-hide="userShow.isCurrentUser()" class="btn btn-third" ui-sref="userEdit">Edit Profile</button>
+          <button ng-hide="userShow.isCurrentUser()" class="btn btn-warning" ng-click="userShow.delete()">Delete Profile</button>
+
+      </div>
     </div>
-  </div>
 
   </div>
-  </div>
+</div>

@@ -1,20 +1,21 @@
-<section class="container">
-  <h1 class="register">Register</h1>
-  <p class="info">Register below to start tracking all of your periods!</p>
+<div class="logreghome">
+<section class="container register">
+  <h1 class="register">REGISTER</h1>
   <form ng-submit="register.register()">
     <div class="row">
-      <div class="col-md-4"><label>Username</label><input class="form-control" type="text" name="username" ng-model="register.user.user.username" placeholder="Username"></div>
-      <div class="col-md-4"><label>Email</label><input class="form-control" type="email" name="email" ng-model="register.user.user.email" placeholder="Email"></div>
-      <div class="col-md-4"><label>Age</label><input class="form-control" type="integer" name="age" ng-model="register.user.user.age" placeholder="Age"></div>
+      <div class="col-md-4"><input class="form-control rg" type="text" name="username" ng-model="register.user.user.username" placeholder="Username"></div>
+      <div class="col-md-4"><input class="form-control rg" type="email" name="email" ng-model="register.user.user.email" placeholder="Email"></div>
+      <div class="col-md-4"><input class="form-control rg" type="integer" name="age" ng-model="register.user.user.age" placeholder="Age"></div>
     </div>
     <div class="row">
-      <div class="col-md-6"><label>Image</label><input class="form-control" type="text" name="Image" ng-model="register.user.user.image" placeholder="Image"></div>
-      <div class="col-md-6"><label>Contraception</label><input class="form-control" type="text" name="language" ng-model="register.user.user.contraception" placeholder="Contraception"></div>
+      <div class="col-md-6"><input class="form-control rg" type="text" name="Image" ng-model="register.user.user.image" placeholder="Image URL"></div>
+      <div class="col-md-6"><input class="form-control rg" type="text" name="language" ng-model="register.user.user.contraception" placeholder="Contraception"></div>
     </div>
     <div class="row">
-      <div class="col-md-6"><label>Password</label><input class="form-control" type="password" name="password" ng-model="register.user.user.password" placeholder="Password"></div>
-      <div class="col-md-6"><label>Password Confirmations</label><input class="form-control" type="password" name="passwordConfirmation" ng-model="register.user.user.passwordConfirmation" placeholder="Password confirmation"></div>
+      <div class="col-md-6"><input class="form-control rg" type="password" name="password" ng-model="register.user.user.password" placeholder="Password"></div>
+      <div class="col-md-6"><input class="form-control rg" type="password" name="passwordConfirmation" ng-model="register.user.user.passwordConfirmation" placeholder="Password confirmation"></div>
     </div>
-    <input class="btn btn-primary" type="submit" value="Submit" />
+    <input class="btn btn-primary rgbut" type="submit" value="Submit" />
   </form>
 </section>
+</div>

@@ -13,27 +13,17 @@
   <link rel="stylesheet" href="/css/style.css">
   <!-- endinject -->
   <link rel="icon" href="/images/avocado-icon.png">
-  <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Comfortaa|Nixie+One|Poiret+One" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Droid+Sans+Mono|Lalezar" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
-</head>
+  <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lalezar" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,700" rel="stylesheet"></head>
 <body ng-controller="MainCtrl as main">
   <header>
-    <div class="site-header-top"><a class="home-brand" ui-sref="home">AVOCADO</a> </div>
+    <div class="site-header-top"><a class="home-brand" ui-sref="home">AVOCADO</a></div>
     <div class="cont">
 
       <!-- <li ng-show="main.user"> -->
       <!-- <p class="navbar-text">Welcome {{ main.user.username }}</p> -->
       <!-- </li> -->
-      <div class="reglog">
-        <li ng-hide="main.user">
-          <button class="btn btn-register" ui-sref="register">REGISTER</button>
-        </li>
-
-        <li ng-hide="main.user">
-          <button class="btn btn-login" ui-sref="login">LOG IN</button>
-        </li>
-      </div>
       <div ng-show="main.user" class="row naving">
         <div class="col-md-2 column firstcol">
           <li ng-show="main.user">
@@ -62,7 +52,7 @@
         <div class="col-md-2 column">
           <li ng-show="main.user">
             <img class="avicon" src="/images/avocado-icon.png" alt="">
-            <a class="notcont" ui-sref="nearestPharmacy">PHARMACY</a>
+            <a class="notcont" ui-sref="nearestPharmacy">EMERGENCY</a>
           </li>
         </div>
         <div class="col-md-2 column">
@@ -75,6 +65,6 @@
       </div>
     </div>
   </header>
-  <main class="container" ui-view></main>
+  <main ui-view></main>
 </body>
 </html>

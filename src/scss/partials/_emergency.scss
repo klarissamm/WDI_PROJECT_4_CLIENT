@@ -1,0 +1,18 @@
+.pharmacy {
+  height: 100vh;
+  font-family: $logo-font;
+  text-align: center;
+
+  p {
+    font-family: $text-font;
+    font-size: 20px;
+
+    .phone {
+      font-size: 15px;
+    }
+  }
+
+  ng-map {
+    height: 450px;
+  }
+}

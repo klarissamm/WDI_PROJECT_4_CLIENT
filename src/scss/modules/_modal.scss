@@ -1,12 +1,19 @@
-.modalcont {
-  margin: 15px;
+.showinfoperiods {
+  margin: 30px;
+  color: $light-primary-color;
 }
 
+#modal-title {
+  font-size: 50px;
+  color: #dc2a5e;
+  font-family: $logo-font;
+
+}
 .modal-content {
   margin: 0 auto;
   width: 80%;
   height: 400px;
-  font-family: $logo-font;
+  font-family: $text-font;
   color: $light-primary-color;
 }
 
@@ -20,4 +27,49 @@
 
 .note-section {
   width: 60%;
+  margin-left: 15px;
+}
+
+h6 {
+  font-size: 30px;
+}
+
+.addnote {
+  font-size: 25px;
+}
+
+.addnotesec {
+  margin-top: 40px;
+}
+
+.modalcont {
+  margin: 20px;
+}
+
+.logof {
+  margin-top: 0px;
+  font-family: $logo-font;
+}
+
+input, button, select, textarea {
+  font-size: 20px;
+  margin-bottom: 20px;
+  height: 40px;
+}
+
+select:focus {
+  outline: 3px solid $dark-primary-color;
+}
+
+.btn-primary {
+  background-color:  $light-primary-color;
+  border: 1px solid $dark-primary-color;
+  color: $white;
+  margin-left: 15px;
+}
+
+.btn-primary:hover {
+  background-color: $white;
+  border: 1px solid $dark-primary-color;
+  color: $light-primary-color;
 }

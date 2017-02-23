@@ -1,5 +1,5 @@
 .periods {
-  margin-top: 20px;
+  margin: 50px;
   font-family: $logo-font;
   color: $light-primary-color;
   font-weight: bold;
@@ -7,37 +7,52 @@
 .periodInfo {
   // height: 100vh(-220px); how to do this?
   h1 {
-    font-size: 40px;
-
+    font-size: 80px;
+    margin-bottom: 30px;
   }
 
 
     .feb {
       color: #dc2a5e;
-      text-align: right;
+      text-align: left;
+      font-size: 50px;
+      margin-bottom: 30px;
     }
+
   button {
     background-color: $white;
-    border: 1px solid $light-primary-color;
+    border: 1px solid black;
     color: $dark-primary-color;
     border: 0px;
     height: 40px;
-    margin-right: 105px;
-    margin-left: 105px;
+    margin-right: 90px;
+    margin-left: 90px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    font-size: 20px;
+    text-decoration: underline;
   }
 
   button:hover {
-    background-color: $dark-primary-color;
+    background-color: $light-primary-color;
     color: $white;
   }
 
   button:focus {
-    background-color: $dark-primary-color;
+    background-color: $light-primary-color;
     color: $white;
+    outline: $dark-primary-color;
   }
 }
 }
 
 .event {
-  width: 152px !important;
+  background: url("../images/period.jpeg") !important;
+  width: 25px !important;
+  height: 25px !important;
+  border-color: $light-primary-color !important;
+}
+
+.event:focus {
+  outline: $light-primary-color !important;
 }

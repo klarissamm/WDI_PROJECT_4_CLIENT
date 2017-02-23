@@ -1,0 +1,78 @@
+.logreghome {
+  width: 100%;
+  height: 100vh;
+  background: url("../images/homepage.jpg") no-repeat center center fixed;
+  background-size: cover;
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 0 auto;
+  z-index: -6;
+  font-family: $logo-font;
+}
+
+
+.loggingin {
+  margin-top: 320px;
+  height: 268px;
+
+  .h1 {
+    font-size: 50px;
+    padding: 0;
+    margin-top: 10px;
+  }
+}
+
+.logbut:hover {
+  background-color: $white;
+  border: 1px solid $dark-primary-color;
+  color: $light-primary-color;
+}
+
+.logbut {
+  background-color:  $light-primary-color;
+  border: 1px solid $dark-primary-color;
+  color: $white;
+  margin-top: -8px;
+  margin-left: 0px;
+}
+
+.logbut:focus {
+  background-color: $white;
+  border: 1px solid $dark-primary-color;
+  color: $light-primary-color;
+}
+
+input {
+  background-color: $white;
+  font-size: 20px;
+}
+
+.register {
+  color: black;
+  border-radius: 20px;
+  height: 340px;
+}
+
+.rg {
+  margin-top: 25px;
+}
+
+.rgbut {
+  margin-top: 25px;
+  background-color:  $light-primary-color;
+  border: 1px solid $dark-primary-color;
+  color: $white;
+}
+
+.rgbut:hover {
+  background-color: $white;
+  border: 1px solid $dark-primary-color;
+  color: $light-primary-color;
+}
+
+.form-control:focus {
+  border-color:  $light-primary-color;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px $light-primary-color;
+  outline: 2px $light-primary-color solid;
+}

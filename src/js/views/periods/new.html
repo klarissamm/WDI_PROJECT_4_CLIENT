@@ -1,11 +1,12 @@
 <section class="container modalcont">
-  <h1 class="register">NEW PERIOD</h1>
-  <h2 class="info">Enter your daily data below</h2>
+  <h1 class="logof">NEW PERIOD</h1>
+  <hr>
+  <h2 class="logof">ENTER BELOW FOR TODAY</h2>
   <form ng-submit="periodNew.create()">
     <div class="row">
       <div class="col-md-4">
-        <label for="pain">PAIN LEVEL?</label>
         <select name="pain" ng-model="periodNew.period.pain">
+          <option value="" disabled selected>Pain today</option>
           <option value="1">Achey Feeling</option>
           <option value="2">Cramps</option>
           <option value="3">Cramps and Headache</option>
@@ -13,9 +14,9 @@
           <option value="5">Kill Me Now</option>
         </select></div>
 
-        <div class="col-md-4">
-          <label for="bleeding">HOW HEAVY IS YOUR BLEEDING?</label>
+        <div class="col-md-3">
           <select name="bleeding" ng-model="periodNew.period.bleeding">
+            <option value="" disabled selected>Bleeding</option>
             <option value="1">Light</option>
             <option value="2">Medium</option>
             <option value="3">Heavy</option>

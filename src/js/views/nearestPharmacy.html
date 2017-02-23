@@ -1,14 +1,16 @@
-<h1>Find your nearest pharmacy</h1>
+<div class="container pharmacy">
+<h1>NEED EMERGENCY SUPPLIES?</h1>
 
 <div ng-hide="main.user_position">
   <h2>You have either blocked this site from accessing your position, or it is yet to have loaded.</h2>
 </div>
 
 <div ng-if="main.user_position">
-  <h2>Your nearest pharmacy is {{nearestPharmacy.pharmacy.name}}</h2>
+  <h2>YOUR NEAREST PHARMACY IS {{nearestPharmacy.pharmacy.name | uppercase }}</h2>
   <p>{{nearestPharmacy.pharmacy.formatted_address}}</p>
-  <p>Telephone {{nearestPharmacy.pharmacy.formatted_phone_number}}</p>
+  <p class="phone">Telephone {{nearestPharmacy.pharmacy.formatted_phone_number}}</p>
   <ng-map center="{{nearestPharmacy.pharmacy.geometry.location.lat}},{{nearestPharmacy.pharmacy.geometry.location.lng}}" zoom="15">
     <marker position="[{{nearestPharmacy.pharmacy.geometry.location.lat}},{{nearestPharmacy.pharmacy.geometry.location.lng}}]" title="{{nearestPharmacy.pharmacy.name}}"></marker>
   </ng-map>
+</div>
 </div>
