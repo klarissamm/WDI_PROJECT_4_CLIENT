@@ -33,16 +33,22 @@
         </li>
       </div>
       <div ng-show="main.user" class="row naving">
-        <div class="col-md-2 column">
+        <div class="col-md-2 column firstcol">
           <li ng-show="main.user">
             <img class="avicon" src="/images/avocado-icon.png" alt="">
-            <a ui-sref="userShow({ id: main.user.id })">MY PROFILE</a>
+            <a class="firstone" ui-sref="home">HOME</a>
           </li>
         </div>
         <div class="col-md-2 column">
           <li ng-show="main.user">
             <img class="avicon" src="/images/avocado-icon.png" alt="">
             <a ui-sref="about">MORE INFO</a>
+          </li>
+        </div>
+        <div class="col-md-2 column">
+          <li ng-show="main.user">
+            <img class="avicon" src="/images/avocado-icon.png" alt="">
+            <a ui-sref="userShow({ id: main.user.id })">MY PROFILE</a>
           </li>
         </div>
         <div class="col-md-2 column">
@@ -54,19 +60,13 @@
         <div class="col-md-2 column">
           <li ng-show="main.user">
             <img class="avicon" src="/images/avocado-icon.png" alt="">
-            <a ui-sref="periodNew">ADD PERIOD</a>
+            <a class="notcont" ui-sref="contactsIndex">NOTIFY CONTACTS</a>
           </li>
         </div>
         <div class="col-md-2 column">
           <li ng-show="main.user">
             <img class="avicon" src="/images/avocado-icon.png" alt="">
-            <a ui-sref="periodNew">EMERGENCIES</a>
-          </li>
-        </div>
-        <div class="col-md-2 column">
-          <li ng-show="main.user">
-            <img class="avicon" src="/images/avocado-icon.png" alt="">
-            <a ng-click="main.logout()">LOGOUT</a>
+            <a class="lastone" ng-click="main.logout()">LOGOUT</a>
           </li>
 
         </div>

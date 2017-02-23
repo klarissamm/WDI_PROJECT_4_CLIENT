@@ -62,6 +62,18 @@ function Router($stateProvider, $locationProvider, $urlRouterProvider){
 .state('about', {
   url: '/about',
   templateUrl: '/js/views/about.html'
+})
+.state('contactsIndex', {
+  url: '/contacts',
+  templateUrl: '/js/views/contacts/index.html',
+  controller: 'ContactsIndexCtrl',
+  controllerAs: 'contactsIndex'
+})
+.state('contactNew', {
+  url: '/contacts',
+  templateUrl: '/js/views/contacts/index.html',
+  controller: 'ContactsNewCtrl',
+  controllerAs: 'contactNew'
 });
 
   $urlRouterProvider.otherwise('/');

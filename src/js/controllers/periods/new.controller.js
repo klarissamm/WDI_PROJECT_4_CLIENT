@@ -13,7 +13,6 @@ function PeriodsNewCtrl(API, $state, $resource, Period, date) {
   vm.create = periodsCreate;
 
   function periodsCreate(){
-    console.log(vm.period);
     return Period
       .save({ period: vm.period })
       .$promise

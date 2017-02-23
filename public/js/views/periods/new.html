@@ -1,11 +1,10 @@
-<section class="container">
-  <h1 class="register">New Period</h1>
-  <p class="info">Enter your daily data below</p>
+<section class="container modalcont">
+  <h1 class="register">NEW PERIOD</h1>
+  <h2 class="info">Enter your daily data below</h2>
   <form ng-submit="periodNew.create()">
     <div class="row">
-      <div class="col-md-4"><label>Date</label><input class="form-control" type="date" name="date" ng-model="periodNew.period.date" placeholder="Date"></div>
       <div class="col-md-4">
-        <label for="pain"> What kind of pain are you experiencing? </label>
+        <label for="pain">PAIN LEVEL?</label>
         <select name="pain" ng-model="periodNew.period.pain">
           <option value="1">Achey Feeling</option>
           <option value="2">Cramps</option>
@@ -15,16 +14,17 @@
         </select></div>
 
         <div class="col-md-4">
-          <label for="bleeding"> How heavy is your bleeding? </label>
+          <label for="bleeding">HOW HEAVY IS YOUR BLEEDING?</label>
           <select name="bleeding" ng-model="periodNew.period.bleeding">
             <option value="1">Light</option>
             <option value="2">Medium</option>
             <option value="3">Heavy</option>
           </select></div>
-          <div class="row">
-            <div class="col-md-6"><label>Any notes</label><input class="form-control" type="text" name="Notes" ng-model="periodNew.period.notes" placeholder="Notes"></div>
+          <div class="note-section">
+
+
+          <h6>ADD A NOTE</h6><input class="form-control" type="text" name="Notes" ng-model="periodNew.period.notes" placeholder="Notes"></div>
             <input class="btn btn-primary" type="submit" value="Submit" />
-          </div>
-        </div>
+                      </div>
       </form>
     </section>
