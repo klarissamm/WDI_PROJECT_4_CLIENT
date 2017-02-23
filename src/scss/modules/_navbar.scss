@@ -1,5 +1,6 @@
 header {
   width: 100%;
+  font-family: $logo-font;
 
 
   .site-header-top {
@@ -9,9 +10,6 @@ header {
     display: block;
     border-top: 0;
     background-color: $bg-color;
-    // position: fixed;
-    // z-index: 2;
-    // top: 0px;
 
     .home-brand {
       font-size: 10rem;
@@ -20,34 +18,14 @@ header {
       line-height: 150px;
       height: 64px;
       text-decoration: none;
-
     }
   }
 
-  // .site-header-middle {
-  //   text-align: center;
-  //   color: $primary-color;
-  //   margin-top: 0;
-  //   margin-bottom: 10px;
-  //   position: relative;
-  //   text-align: center;
-  //   vertical-align: middle;
-  //   // display: block;
-  //   // border-top: 0;
-  //   background-color: $bg-color;
-  //   font-size: 3.5rem;
-  //   font-family: $logo-font;
-  //   font-weight: bold;
-  //   color: $light-primary-color;
-  //   line-height: 70px;
-  //   // height: 50px;
-  // }
-
-  .container {
+  .cont {
     background-color: $white;
     margin: 0 auto;
-    padding-right: 0;
-    width: 100%;
+    width: 99%;
+    text-align: center;
 
 
     .naving {
@@ -80,22 +58,13 @@ header {
         font-size: 1.5rem;
         padding: 10px;
         position: absolute;
-        left: 50px;
+        left: 45px;
         bottom: 0px;
+
       }
     }
   }
 }
-
-// header .container .column:hover {
-//       background-color: $primary-color;
-//       color: $white;
-//
-// a:hover {
-//           color: $white;
-//
-//         }
-//     }
 
 header .container .column:hover {
   background-color: $primary-color;

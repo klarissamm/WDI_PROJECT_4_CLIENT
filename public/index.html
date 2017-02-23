@@ -18,7 +18,7 @@
 <body ng-controller="MainCtrl as main">
   <header>
     <div class="site-header-top"><a class="home-brand" ui-sref="home">AVOCADO</a> </div>
-    <div class="container">
+    <div class="cont">
 
       <!-- <li ng-show="main.user"> -->
       <!-- <p class="navbar-text">Welcome {{ main.user.username }}</p> -->
@@ -32,11 +32,18 @@
           <button class="btn btn-login" ui-sref="login">LOG IN</button>
         </li>
       </div>
+
       <div ng-show="main.user" class="row naving">
         <div class="col-md-2 column">
           <li ng-show="main.user">
             <img class="avicon" src="/images/avocado-icon.png" alt="">
-            <a ui-sref="userShow({ id: main.user.id })"> {{ main.user.username |  uppercase }}'S PROFILE</a>
+            <a ui-sref="home">HOME</a>
+          </li>
+        </div>
+        <div class="col-md-2 column">
+          <li ng-show="main.user">
+            <img class="avicon" src="/images/avocado-icon.png" alt="">
+            <a ui-sref="userShow({ id: main.user.id })">MY PROFILE</a>
           </li>
         </div>
         <div class="col-md-2 column">
@@ -48,19 +55,13 @@
         <div class="col-md-2 column">
           <li ng-show="main.user">
             <img class="avicon lighten" src="/images/avocado-icon.png" alt="">
-            <a class="lighten" lighten ui-sref="periodsIndex">{{ main.user.username |  uppercase }}'S PERIODS</a>
+            <a class="lighten" lighten ui-sref="periodsIndex">MY PERIODS</a>
           </li>
         </div>
         <div class="col-md-2 column">
           <li ng-show="main.user">
             <img class="avicon" src="/images/avocado-icon.png" alt="">
-            <a ui-sref="periodNew">ADD PERIOD</a>
-          </li>
-        </div>
-        <div class="col-md-2 column">
-          <li ng-show="main.user">
-            <img class="avicon" src="/images/avocado-icon.png" alt="">
-            <a ui-sref="periodNew">EMERGENCIES</a>
+            <a ui-sref="periodNew">NOTIFY CONTACTS</a>
           </li>
         </div>
         <div class="col-md-2 column">

@@ -11,5 +11,4 @@ function UsersIndexCtrl(User, CurrentUserService){
   vm.getUser = function(){
     return CurrentUserService.currentUser;
   };
-
 }

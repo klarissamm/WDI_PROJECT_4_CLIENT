@@ -1,10 +1,7 @@
 @import "variables";
 @import "modules/navbar";
+@import "modules/calendar";
 @import "partials/usershow";
 @import "partials/about";
 @import "partials/home";
 @import "partials/periodsIndex";
-
-.event {
-  width: 152px !important;
-}

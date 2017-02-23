@@ -4,6 +4,8 @@
   color: $light-primary-color;
   font-weight: bold;
 
+.periodInfo {
+  // height: 100vh(-220px); how to do this?
   h1 {
     font-size: 40px;
 
@@ -33,4 +35,9 @@
     background-color: $dark-primary-color;
     color: $white;
   }
+}
+}
+
+.event {
+  width: 152px !important;
 }

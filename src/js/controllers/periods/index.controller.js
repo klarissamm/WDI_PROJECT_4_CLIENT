@@ -13,7 +13,7 @@ function PeriodsIndexCtrl(Period, calendarConfig, $uibModal, $document, $scope){
       period.title = 'Show Infomation';
       period.startsAt = new Date(period.date);
       period.color = {
-        primary: 'green'
+        primary: '#dc2a5e'
       };
       period.incrementsBadgeTotal = false;
       period.allDay = true;
@@ -24,12 +24,12 @@ function PeriodsIndexCtrl(Period, calendarConfig, $uibModal, $document, $scope){
   vm.calendarView = 'month';
   vm.viewDate     = new Date();
 
-  vm.open = function(period, size) {
-    var modalInstance = $uibModal.open({
+  vm.open = function(period) {
+    const modalInstance = $uibModal.open({
       animation: true,
       ariaLabelledBy: 'modal-title',
       ariaDescribedBy: 'modal-body',
-      size: size,
+      size: 'lg',
       appendTo: angular.element($document[0].querySelector('main')),
       controller: 'PeriodsShowCtrl',
       controllerAs: 'periodShow',
@@ -42,6 +42,25 @@ function PeriodsIndexCtrl(Period, calendarConfig, $uibModal, $document, $scope){
     vm.close = function(){
       angular.element('#modal').modal('hide');
     };
+  };
 
+  vm.addPeriod = function(date) {
+    const modalInstance = $uibModal.open({
+      animation: true,
+      ariaLabelledBy: 'modal-title',
+      ariaDescribedBy: 'modal-body',
+      size: 'lg',
+      appendTo: angular.element($document[0].querySelector('main')),
+      controller: 'PeriodsNewCtrl',
+      controllerAs: 'periodNew',
+      templateUrl: '/js/views/periods/new.html',
+      resolve: {
+        date: date
+      }
+    });
+
+    vm.close = function(){
+      angular.element('#modal').modal('hide');
+    };
   };
 }
