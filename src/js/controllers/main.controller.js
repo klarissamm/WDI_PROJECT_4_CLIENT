@@ -7,7 +7,7 @@ function MainCtrl($rootScope, CurrentUserService, $state, $scope) {
   const vm = this;
   $rootScope.$on('loggedIn', () => {
     vm.user = CurrentUserService.currentUser;
-    $state.go('userShow', {id: vm.user.id});
+    $state.go('about');
   });
   $rootScope.$on('loggedOut', () => {
     vm.user = null;
@@ -25,3 +25,5 @@ function MainCtrl($rootScope, CurrentUserService, $state, $scope) {
     $scope.$apply();
   });
 }
+
+// 'userShow', {id: vm.user.id}
