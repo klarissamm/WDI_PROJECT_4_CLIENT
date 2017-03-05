@@ -1,3 +1,3 @@
 angular
   .module('avocado')
-  .constant('API', 'http://localhost:3000');
+  .constant('API', 'https://klarissa-wdi-project-4-api.herokuapp.com/');
