@@ -18,7 +18,7 @@ function PeriodsIndexCtrl(Period, calendarConfig, $uibModal, $document, $scope, 
     .then(data => {
       vm.periods = data.map(period => {
         period.title = 'Show Infomation';
-        period.startsAt = new Date(period.date);
+        period.startsAt = new Date(period.date).addDays(1);
         period.color = {
           primary: '#dc2a5e'
         };
@@ -72,5 +72,11 @@ function PeriodsIndexCtrl(Period, calendarConfig, $uibModal, $document, $scope, 
     vm.close = function(){
       angular.element('#modal').modal('hide');
     };
+  };
+
+
+  Date.prototype.addDays = function(days) {
+    this.setDate(this.getDate() + parseInt(days));
+    return this;
   };
 }
