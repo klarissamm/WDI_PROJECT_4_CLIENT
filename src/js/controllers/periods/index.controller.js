@@ -18,7 +18,7 @@ function PeriodsIndexCtrl(Period, calendarConfig, $uibModal, $document, $scope, 
     .then(data => {
       vm.periods = data.map(period => {
         period.title = 'Show Infomation';
-        period.startsAt = new Date(period.date).addDays(1);
+        period.startsAt = new Date(period.date);
         period.color = {
           primary: '#dc2a5e'
         };
@@ -74,9 +74,10 @@ function PeriodsIndexCtrl(Period, calendarConfig, $uibModal, $document, $scope, 
     };
   };
 
+  // Might need this when there are time difference problems:
 
-  Date.prototype.addDays = function(days) {
-    this.setDate(this.getDate() + parseInt(days));
-    return this;
-  };
+  // Date.prototype.addDays = function(days) {
+  //   this.setDate(this.getDate() + parseInt(days));
+  //   return this;
+  // };
 }
