@@ -23,8 +23,8 @@
   height: 100vh;
 
   img {
-    height: 100vh;
-    width: auto;
+    height: auto;
+    width: 100%;
   }
 }
 
@@ -32,8 +32,8 @@
   height: 100vh;
 
   img {
-    height: 100vh;
-    width: auto;
+    height: auto;
+    width: 100%;
   }
 }
 
@@ -61,6 +61,10 @@
   height: 100vh;
   // font-family: $text-font;
 
+  img {
+    width: 100%;
+  }
+
   h1 {
     margin-top: 0;
     text-align: center;
@@ -78,6 +82,7 @@
   p {
     color: $light-primary-color;
     font-size: 20px;
+    text-align: justify;
 
     a {
       color: #dc2a5e;

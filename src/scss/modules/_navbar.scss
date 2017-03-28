@@ -46,7 +46,7 @@ header {
         width: 22px;
         height: 25px;
         position: absolute;
-        left: 90px;
+        left: 97px;
         top: 8px;
       }
 
@@ -58,7 +58,7 @@ header {
         font-size: 1.5rem;
         padding: 10px;
         position: absolute;
-        left: 50px;
+        left: 58px;
         bottom: 0px;
 
       }
@@ -75,15 +75,11 @@ header .column:hover img { -webkit-filter: invert(100%) !important; }
 header .column:hover a { color: #fff !important; }
 
 header .cont .column > li > .firstone {
-    left: 68px;
-}
-
-header .cont .column > li > .notcont {
-    left: 35px;
+    left: 76px;
 }
 
 header .cont .column > li > .lastone {
-    left: 64px;
+    left: 70px;
 }
 
 header .cont .firstcol {
@@ -91,5 +87,5 @@ header .cont .firstcol {
 }
 
 header .cont .column > li > .notcont {
-    left: 55px;
+    left: 62px;
 }
