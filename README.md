@@ -1,6 +1,6 @@
 #Avocado
 
-**A Period Tracker site by Klarissa Munz**
+**A Period Tracker site by Klarissa M**
 
 Final project for Web Development Immersive course at General Assembly.
 
